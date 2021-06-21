@@ -38,7 +38,7 @@ namespace RoboSharp
                         var osVersionInfo = new OSVERSIONINFOEX { OSVersionInfoSize = Marshal.SizeOf(typeof(OSVERSIONINFOEX)) };
                         RtlGetVersion(ref osVersionInfo);
                         var versionString = $"{osVersionInfo.MajorVersion}.{osVersionInfo.MinorVersion}{osVersionInfo.BuildNumber}";
-                        version = Convert.ToDouble(versionString);
+                        version = Convert.ToDouble(versionString, System.Globalization.NumberFormatInfo.InvariantInfo);
                         return version.Value;
                     }
                 }
