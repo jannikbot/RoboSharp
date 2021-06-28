@@ -18,7 +18,6 @@ namespace RoboSharp
         {
             // Get rid of single and double quotes
             path = path.Replace("\"", "");
-            path = path.Replace("\'", "");
 
             // Get rid of padding
             path = path.Trim();
